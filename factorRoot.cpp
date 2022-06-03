@@ -7,7 +7,6 @@ void simplifyRoot(int value)
     int factor = 2;
     int simplifiedRadicand = value;
     int root = 1;
-    int radicand = 1;
     while (factor <= simplifiedRadicand)
     {
         if (simplifiedRadicand % (factor*factor) == 0)
