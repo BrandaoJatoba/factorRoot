@@ -10,28 +10,17 @@ void simplifyRoot(int value)
     int radicand = 1;
     while (factor <= simplifiedRadicand)
     {
-        if (simplifiedRadicand % factor == 0)
+        if (simplifiedRadicand % (factor*factor) == 0)
         {
-            simplifiedRadicand /= factor;
-
-            if (simplifiedRadicand % factor == 0)
-            {
-                simplifiedRadicand /= factor;
-                root *= factor;
-            } else
-            {
-                radicand *= factor;
-            }
-
-
+            simplifiedRadicand /= (factor * factor);
+            root *= factor;            
         } else 
         {
             factor++;
-
         }
     }
     printf("Raiz: %d", root);
-    if (radicand!=1) {printf(", Radicando: %d    ", radicand);}
+    if (simplifiedRadicand!=1) {printf(", Radicando: %d    ", simplifiedRadicand);}
 
 
 }
@@ -41,7 +30,6 @@ int main(int argc, char const *argv[])
     printf("Insira radicando a ser simplificado:");
     int teste;
     scanf("%d", &teste);
-    printf("\n");
     simplifyRoot(teste);
     printf("\n");
     system("PAUSE");
