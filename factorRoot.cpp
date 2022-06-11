@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <cstdlib>
-
-
 void simplifyRoot(int value)
 {
-    int factor = 2;
     int simplifiedRadicand = value;
+    int factor = 2;
     int root = 1;
     while (factor <= simplifiedRadicand)
     {
@@ -19,11 +17,8 @@ void simplifyRoot(int value)
         }
     }
     printf("Raiz: %d", root);
-    if (simplifiedRadicand!=1) {printf(", Radicando: %d    ", simplifiedRadicand);}
-
-
+    if (simplifiedRadicand!=1) printf(", Radicando: %d    ", simplifiedRadicand);
 }
-
 int main(int argc, char const *argv[])
 {
     printf("Insira radicando a ser simplificado:");

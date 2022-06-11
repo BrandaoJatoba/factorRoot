@@ -11,7 +11,5 @@ def simplifyRoot(value):
     print("Raiz: " + str(root))
     if (simplifiedRadicand!=1):
         print("Radicando: " + str(int(simplifiedRadicand)))
-
-
 teste = int(input("Insira radicando a ser simplificado:"))
 simplifyRoot(teste)
